@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS EjemploSpring;
+
+USE EjemploSpring;
+
+CREATE TABLE IF NOT EXISTS Usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    edad INT CHECK (edad >= 0),
+    correo_electronico VARCHAR(100) UNIQUE NOT NULL,
+    telefono VARCHAR(20) UNIQUE
+);
